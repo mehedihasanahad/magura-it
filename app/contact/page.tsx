@@ -17,12 +17,12 @@ export default function ContactPage() {
     message: "",
   })
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormState((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault()
     // Handle form submission logic here
     console.log("Form submitted:", formState)
@@ -40,7 +40,7 @@ export default function ContactPage() {
               Get in <span className="gradient-text">Touch</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400">
-              Have a question or want to work together? We'd love to hear from you.
+              Have a question or want to work together? We&apos;d love to hear from you.
             </p>
           </div>
 
@@ -102,7 +102,7 @@ export default function ContactPage() {
                 <CardHeader>
                   <CardTitle className="text-2xl">Send us a Message</CardTitle>
                   <CardDescription>
-                    Fill out the form below and we'll get back to you as soon as possible.
+                    Fill out the form below and we&apos;ll get back to you as soon as possible.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -175,7 +175,7 @@ export default function ContactPage() {
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
-                  allowFullScreen=""
+                  allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="MaguraIT Location"

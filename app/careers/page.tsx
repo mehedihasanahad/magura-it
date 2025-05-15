@@ -85,11 +85,13 @@ const jobOpenings = [
   },
 ]
 
+type Job = typeof jobOpenings[number];
+
 export default function CareersPage() {
-  const [selectedJob, setSelectedJob] = useState(null)
+  const [selectedJob, setSelectedJob] = useState<Job | null>(null)
   const [showApplicationForm, setShowApplicationForm] = useState(false)
 
-  const handleApply = (job) => {
+  const handleApply = (job: Job) => {
     setSelectedJob(job)
     setShowApplicationForm(true)
     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -104,7 +106,7 @@ export default function CareersPage() {
               Join Our <span className="gradient-text">Team</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400">
-              Build your career with us and be part of a team that's innovating the digital future.
+              Build your career with us and be part of a team that&apos;s innovating the digital future.
             </p>
           </div>
 
@@ -112,7 +114,7 @@ export default function CareersPage() {
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
               <Card className="max-w-3xl mx-auto border-0 shadow-lg">
                 <CardHeader>
-                  <CardTitle className="text-2xl">Apply for: {selectedJob.title}</CardTitle>
+                  <CardTitle className="text-2xl">Apply for: {selectedJob?.title ?? ""}</CardTitle>
                   <CardDescription>Fill out the form below to apply for this position.</CardDescription>
                 </CardHeader>
                 <CardContent>

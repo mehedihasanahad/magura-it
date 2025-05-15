@@ -69,7 +69,7 @@ const TestimonialsSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
           >
-            Don't just take our word for it. Hear from our satisfied clients about their experience working with
+            Don&apos;t just take our word for it. Hear from our satisfied clients about their experience working with
             MaguraIT.
           </motion.p>
         </div>
@@ -102,7 +102,7 @@ const TestimonialsSection = () => {
                   <div className="flex-1 text-center md:text-left">
                     <Quote className="h-8 w-8 text-blue-500 mb-4 mx-auto md:mx-0" />
                     <p className="text-lg mb-4 text-gray-700 dark:text-gray-300 italic">
-                      "{testimonials[currentIndex].content}"
+                      &quot;{testimonials[currentIndex].content}&quot;
                     </p>
                     <h4 className="text-xl font-bold">{testimonials[currentIndex].name}</h4>
                     <p className="text-gray-600 dark:text-gray-400">{testimonials[currentIndex].position}</p>

@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 const categories = ["All", "Web Development", "Mobile Apps", "Custom Software", "Cloud Solutions", "AI & Automation"]
 
@@ -74,7 +75,7 @@ export default function PortfolioPage() {
               Our <span className="gradient-text">Portfolio</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400">
-              Explore our successful projects and see how we've helped businesses transform their digital presence.
+              Explore our successful projects and see how we&apos;ve helped businesses transform their digital presence.
             </p>
           </div>
 
@@ -103,9 +104,11 @@ export default function PortfolioPage() {
               >
                 <Card className="card-hover border-0 bg-white dark:bg-gray-800 shadow-lg overflow-hidden h-full">
                   <div className="relative overflow-hidden">
-                    <img
+                    <Image
                       src={project.image || "/placeholder.svg"}
                       alt={project.title}
+                      width={500}
+                      height={300}
                       className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
                     />
                     <div className="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">

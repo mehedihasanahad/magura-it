@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function AboutPage() {
   return (
@@ -32,8 +33,22 @@ export default function AboutPage() {
                 <Link href="/contact">Get in Touch</Link>
               </Button>
             </div>
-            <div className="rounded-lg overflow-hidden shadow-xl">
-              <img src="/placeholder.svg?height=400&width=600" alt="MaguraIT Office" className="w-full h-auto" />
+            <div>
+              <Image
+                src="/placeholder.svg"
+                alt="MaguraIT Office"
+                width={600}
+                height={400}
+                className="w-full h-auto"
+                priority
+              />
+              <Image
+                src="/placeholder.svg"
+                alt="MaguraIT Office"
+                width={600}
+                height={400}
+                className="w-full h-auto"
+              />
             </div>
           </div>
 
